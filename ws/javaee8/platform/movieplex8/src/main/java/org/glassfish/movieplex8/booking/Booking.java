@@ -46,6 +46,7 @@ import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
+import java.io.Serializable;
 
 import org.glassfish.movieplex8.entities.Movie;
 import org.glassfish.movieplex8.entities.ShowTiming;
@@ -55,7 +56,7 @@ import org.glassfish.movieplex8.entities.ShowTiming;
  */
 @Named
 @FlowScoped("booking")
-public class Booking {
+public class Booking implements Serializable{
 
     int movieId;
     String startTime;
